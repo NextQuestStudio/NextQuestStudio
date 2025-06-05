@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NQS-Admin Login</title>
+    <link rel="stylesheet" href="styles/style.css">
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm" class="login-form">
+            <h2>Admin Login</h2>
+            <div id="login-step">
+                <div class="input-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div class="input-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password" required>
+                </div>
+                <div class="g-recaptcha" data-sitekey="Y6LfcGlcrAAAAACwcb8PEoQsqqWrteHDC2_JgTJlr"></div>
+                <button type="submit" id="loginButton">Login</button>
+            </div>
+
+            <div id="otp-step" class="hidden">
+                <p>An access code has been sent to your email. It will expire in 10 minutes.</p>
+                <div class="input-group">
+                    <label for="otp">One-Time Access Code</label>
+                    <input type="text" id="otp" name="otp" required>
+                </div>
+                <button type="button" id="verifyOtpButton">Verify Code</button>
+            </div>
+            
+            <div id="error-message" class="error-message-box"></div>
+        </form>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-auth-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-firestore-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.1/firebase-functions-compat.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>
