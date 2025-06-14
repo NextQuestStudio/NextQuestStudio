@@ -1,1 +1,113 @@
+/* General Body and Background Styling */
+body {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+/* Particle Effect Canvas Styling */
+#particle-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* Shared Form Container Styling */
+.form-container {
+    background-color: rgba(23, 23, 38, 0.85);
+    border: 1px solid #4a4a5a;
+    border-radius: 8px;
+    padding: 2.5rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+    width: 100%;
+    max-width: 420px;
+    backdrop-filter: blur(6px);
+    z-index: 10;
+}
+
+/* Shared Typography */
+h2 {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 1rem;
+}
+
+p {
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #a0a0b0;
+    margin-bottom: 2rem;
+}
+
+/* Shared Form Element Styling */
+.form-group {
+    margin-bottom: 1.5rem;
+    position: relative;
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #c0c0d0;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #161625;
+    border: 1px solid #4a4a5a;
+    border-radius: 4px;
+    color: #e0e0e0;
+    font-size: 1rem;
+    box-sizing: border-box;
+    transition: all 0.2s ease;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: #00aaff;
+    box-shadow: 0 0 8px rgba(0, 170, 255, 0.6);
+}
+
+/* Shared Button Styling */
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #00aaff;
+    color: #ffffff;
+}
+
+.submit-btn:hover {
+    background-color: #0088cc;
+    box-shadow: 0 0 12px rgba(0, 170, 255, 0.8);
+}
+
+/* Shared Error Message Styling */
+.error-message {
+    color: #ff4d4d;
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    min-height: 1.2em; /* Prevents layout shift when message appears */
+}
 
