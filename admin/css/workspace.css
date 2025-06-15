@@ -1,1 +1,133 @@
+/* Keep body scrollable */
+body {
+    overflow: auto;
+    background-color: #12121f;
+}
+
+.admin-header {
+    background-color: #1a1a2e;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid #4a4a5a;
+    color: #ffffff;
+}
+
+.header-content, .workspace-main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.logout-button {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: #e0e0e0;
+    background-color: transparent;
+    border: 1px solid #4a4a5a;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.logout-button:hover {
+    background-color: #4a4a5a;
+    color: #ffffff;
+}
+
+.workspace-main {
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.workspace-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    border-bottom: 1px solid #2a2a3e;
+    padding-bottom: 1rem;
+}
+
+.workspace-header h2 {
+    margin: 0;
+    color: #ffffff;
+}
+
+#create-project-btn {
+    width: auto; /* Override shared.css width:100% */
+    padding: 0.75rem 1.5rem;
+}
+
+#projects-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.5rem;
+}
+
+.project-card {
+    background-color: #1a1a2e;
+    border: 1px solid #2a2a3e;
+    border-radius: 8px;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.2s ease-in-out;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #00aaff;
+}
+
+.project-card h3 {
+    margin: 0 0 0.5rem 0;
+    color: #e0e0e0;
+}
+
+.project-card .status {
+    font-size: 0.8rem;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 1rem;
+    align-self: flex-start; /* Don't stretch */
+}
+
+.project-card .status.Active { background-color: #007bff; color: white; }
+.project-card .status.Planning { background-color: #ffc107; color: black; }
+.project-card .status.Completed { background-color: #28a745; color: white; }
+
+.project-card p {
+    font-size: 0.9rem;
+    color: #a0a0b0;
+    line-height: 1.6;
+    flex-grow: 1; /* Makes description take available space */
+    margin: 0 0 1.5rem 0;
+    text-align: left;
+}
+
+.loading-text, .no-projects-text {
+    grid-column: 1 / -1; /* Span all columns */
+    text-align: center;
+    color: #a0a0b0;
+    font-size: 1.2rem;
+    padding: 2rem;
+}
 
