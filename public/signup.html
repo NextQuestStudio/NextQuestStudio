@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Next Quest Studios - Sign Up</title>
+    
+    <link rel="stylesheet" href="../css/shared.css">
+    <link rel="stylesheet" href="../css/auth.css">
+
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+</head>
+<body>
+    <canvas id="particle-canvas"></canvas>
+
+    <div class="form-container">
+        <h2>Create Your Account</h2>
+        <p>Join the Next Quest Studios community.</p>
+
+        <form id="signup-form" novalidate>
+            <div class="form-group">
+                <label for="signup-username">Username</label>
+                <input type="text" id="signup-username" required>
+                <div id="username-error" class="validation-error"></div>
+            </div>
+            
+            <div class="form-group">
+                <label for="signup-email">Email Address</label>
+                <input type="email" id="signup-email" required>
+            </div>
+
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" required>
+            </div>
+
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" required>
+            </div>
+
+            <div id="password-reqs" class="password-reqs-container">
+                <p>Password must contain:</p>
+                <ul>
+                    <li id="req-length">At least 8 characters</li>
+                    <li id="req-uppercase">An uppercase letter</li>
+                    <li id="req-lowercase">A lowercase letter</li>
+                    <li id="req-number">A number</li>
+                    <li id="req-special">A special character (!@#$%^&*)</li>
+                </ul>
+            </div>
+
+            <div class="form-group">
+                <div class="g-recaptcha" data-sitekey="6LfcGlcrAAAAACwcb8PEoQsqqWrteHDC2_JgTJlr"></div>
+            </div>
+
+            <div id="form-error" class="error-message"></div>
+
+            <button type="submit" class="submit-btn">Create Account</button>
+        </form>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    
+    <script src="../js/shared.js"></script>
+    <script src="../js/auth.js"></script>
+</body>
+</html>
